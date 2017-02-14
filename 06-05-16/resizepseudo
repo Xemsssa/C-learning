@@ -1,0 +1,50 @@
+resize.c
+
+for (iterate over scan lines)
+    for (iterate n times for vertical re-size)
+        for (iterate over pixels in scanline)
+            fread(rgbtriple, old_image)
+            for (iterate n times for horizontal re-size)
+                fwrite(rgbtriple, new_image)
+        fseek(skip old padding)
+        for(new padding)
+            fwrite(new padding)
+        if (loop hasn't been performed n-1 times yet)
+            fseek(go back to start of scan line)
+
+
+recovery.c
+
+open card file
+repeat untill end of card
+{
+    read 512 to buffer
+    start new jpg
+    {
+        //if  find start (0xff 0xd8 0xff) and read 512 
+        yes
+        {
+            sprintf
+            //close old
+            //open new one
+        }
+        no
+        {
+            //continue to file
+        }
+    }   
+    already found a jpg
+    {
+        no
+        {
+            // find start (0xff 0xd8 0xff) and read 512
+            //continue search
+        }
+        yes
+        {
+            //write open file to folder
+        }
+    }   
+}
+close last jpg
+close card file 

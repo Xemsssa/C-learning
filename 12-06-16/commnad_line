@@ -1,0 +1,52 @@
+ctrl alt l
+
+life edit
+
+mkdir dir
+ ls dir
+ touch text.txt
+ ls -l
+
+chmod o
+chmod u
+chmod g
+chmod g+w file.txt
+
+chmod f+wx file.txt
+
+chmod u=rwx, g=rw, o=r
+
+chmod g=
+
+chmod 444
+
+chmod 644
+
+chmod 744
+
+ls 
+find . -type f
+
+find . -name "small"
+
+find . - iname
+
+find . -size +2
+
+find . -size -2050
+
+find . -mtime  +1
+
+find . -ctime
+
+find . -atime
+
+find . -iname -"*.txt" -or -iname "*.doc"
+
+grep "Lorem"
+
+grep -i "Lorem"
+
+grep -il
+
+grep -ilr "Lorem"

@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+struct rec
+{
+	int i;
+	float f;
+	char c;
+}
+rec;
+
+int main(int argc, char const *argv[])
+{
+	struct rec *p;
+	p =(struct rec*) malloc(sizeof(struct rec));
+	(*p).i = 10;
+	p ->f  = 3.14; 
+	p -> c = 'a';
+
+	printf("%d %f %c\n", (*p).i, p ->f, p -> c);
+
+	free(p);
+
+	return 0;
+}
